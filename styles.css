@@ -47,6 +47,11 @@ body, a:link, a:visited, a:active{
    animation: spin9 2s infinite linear;
 }
 
+.characterimage {
+  height: 80px;
+  width: 80px;
+}
+
 @keyframes spin {
     0%  {transform: rotate(0deg);}
     10%  {transform: rotate(-25deg);}

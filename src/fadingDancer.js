@@ -1,5 +1,5 @@
-var makeFadingDancer = function(top, left, timeBetweenSteps) {
-  makeDancer.call(this, top, left, timeBetweenSteps);
+var FadingDancer = function(top, left, timeBetweenSteps) {
+  Dancer.call(this, top, left, timeBetweenSteps);
 
   this.$node = $('<span class="fading dancer"></span>');
 
@@ -7,13 +7,13 @@ var makeFadingDancer = function(top, left, timeBetweenSteps) {
 
   this.setPosition(top, left);
 };
-makeFadingDancer.prototype = Object.create(makeDancer.prototype);
+FadingDancer.prototype = Object.create(Dancer.prototype);
 
-makeFadingDancer.prototype.constructor = makeFadingDancer;
+FadingDancer.prototype.constructor = FadingDancer;
 
-makeFadingDancer.prototype.step = function() {
+FadingDancer.prototype.step = function() {
   
-  makeDancer.prototype.step.call(this);
+  Dancer.prototype.step.call(this);
   // toggle() is a jQuery method to show/hide the <span> tag.
   // See http://api.jquery.com/category/effects/ for this and
   // other effects you can use on a jQuery-wrapped html tag.

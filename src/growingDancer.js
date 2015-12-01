@@ -1,21 +1,21 @@
-var makeGrowingDancer = function(top, left, timeBetweenSteps) {
-  makeDancer.call(this, top, left, timeBetweenSteps);
+var GrowingDancer = function(top, left, timeBetweenSteps) {
+  Dancer.call(this, top, left, timeBetweenSteps);
 
   this.$node = $('<span class="growing dancer"></span>');
-  var $face = $('<img src="maxkahn.jpg">');
+  var $face = $('<img class="characterimage" src="maxkahn.jpg">');
   this.$node.append($face);
 
   this.step();
 
   this.setPosition(top, left);
 }
-makeGrowingDancer.prototype = Object.create(makeDancer.prototype);
+GrowingDancer.prototype = Object.create(Dancer.prototype);
 
-makeGrowingDancer.prototype.constructor = makeGrowingDancer;
+GrowingDancer.prototype.constructor = GrowingDancer;
 
-makeGrowingDancer.prototype.step = function() {
+GrowingDancer.prototype.step = function() {
   
-  makeDancer.prototype.step.call(this);
+  Dancer.prototype.step.call(this);
   // toggle() is a jQuery method to show/hide the <span> tag.
   // See http://api.jquery.com/category/effects/ for this and
   // other effects you can use on a jQuery-wrapped html tag.
@@ -31,7 +31,7 @@ makeGrowingDancer.prototype.step = function() {
   });
 
   
-  //make this spin on mouseover
+  // this spin on mouseover
 
   // $(".growing").on("mouseOver", function(event) {
 
