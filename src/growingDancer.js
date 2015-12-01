@@ -20,11 +20,13 @@ GrowingDancer.prototype.step = function() {
   
   Dancer.prototype.step.call(this);
 
-  var bindedPos = 
+  var bindedPos = this.setPosition.bind(this);
 
-  window.setInterval(function() {
-    this.setPosition(this.top + 10, this.left + 10);
-  }, 500);
+  this.top += 10;
+
+  this.left += 10;
+
+  setInterval(bindedPos(this.top, this.left), 500);
   
 
   //Dancer.prototype.setPosition.call(this, this.top+10, this.left+10);
