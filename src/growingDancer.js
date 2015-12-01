@@ -1,8 +1,8 @@
 var GrowingDancer = function(top, left, timeBetweenSteps) {
   Dancer.call(this, top, left, timeBetweenSteps);
 
-  this.top = top;
-  this.left = left;
+  // this.top = top;
+  // this.left = left;
 
   this.$node = $('<span class="growing dancer"></span>');
   var $face = $('<img class="characterimage" src="maxkahn.jpg">');
@@ -22,12 +22,16 @@ GrowingDancer.prototype.step = function() {
 
   var bindedPos = this.setPosition.bind(this);
 
-  this.top += 10;
+  // this.top += 10;
 
-  this.left += 10;
+  // this.left += 10;
 
-  setInterval(bindedPos(this.top, this.left), 500);
-  
+  var pos = this.$node.position();
+  console.log("pos", pos);
+
+  //setInterval(bindedPos(this.top, this.left), 500);
+  setInterval(bindedPos(pos.top + 10, pos.left+10), 500);
+
 
   //Dancer.prototype.setPosition.call(this, this.top+10, this.left+10);
   // toggle() is a jQuery method to show/hide the <span> tag.
