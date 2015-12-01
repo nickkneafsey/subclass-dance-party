@@ -2,6 +2,8 @@ var makeGrowingDancer = function(top, left, timeBetweenSteps) {
   makeDancer.call(this, top, left, timeBetweenSteps);
 
   this.$node = $('<span class="growing dancer"></span>');
+  var $face = $('<img src="maxkahn.jpg">');
+  this.$node.append($face);
 
   this.step();
 

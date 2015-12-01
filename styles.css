@@ -3,7 +3,13 @@ body, html{
 }
 body{
   margin: 0px;
-  background-color:#444;
+  background: url("background_image.jpg");
+  no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  /*background-size: cover;*/
+  /*background-color:#444;*/
   font-size: 18px;
 }
 body, a:link, a:visited, a:active{
@@ -68,3 +74,4 @@ body, a:link, a:visited, a:active{
   90% {transform: rotate(300deg);}
   100% {transform: rotate(360deg);}
 }
+
