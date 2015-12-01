@@ -29,5 +29,11 @@ $(document).ready(function() {
     );
     $('body').append(dancer.$node);
   });
+
+
+
+// $(".growing").on("mouseover", function(event) {
+//   $(this).css("border", "100px");
+// });
 });
 

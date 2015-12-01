@@ -25,3 +25,17 @@ body, a:link, a:visited, a:active{
   border-radius:10px;
   position:absolute;
 }
+.fading {
+  border:10px solid blue;
+  border-radius:10px;
+  position:absolute;
+}
+.growing {
+  border:10px solid green;
+  border-radius:10px;
+  position:absolute;
+}
+
+.big {
+  border: 50px solid yellow;
+}
