@@ -22,7 +22,6 @@ Dancer.prototype.step = function() {
 
   
   var pos = this.$node.position();
-  //console.log(pos);
   var maxHeight = $("body").height();
   var maxWidth = $("body").width();
   var minHeight = 0;

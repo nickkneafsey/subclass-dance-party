@@ -2,7 +2,8 @@ var FadingDancer = function(top, left, timeBetweenSteps) {
   Dancer.call(this, top, left, timeBetweenSteps);
 
   this.$node = $('<span class="fading dancer"></span>');
-
+  var $face = $('<img class="characterimage" src="ghost.png">');
+  this.$node.append($face);
   this.step();
 
   this.setPosition(top, left);
