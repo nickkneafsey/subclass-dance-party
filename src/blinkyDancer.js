@@ -17,7 +17,7 @@ BlinkyDancer.prototype.step = function() {
   
   //Dancer.prototype.step.call(this);
 
-    var bindedFun = this.step.bind(this);
+  var bindedFun = this.step.bind(this);
   setTimeout(bindedFun, this.timeBetweenSteps);
   
   this.$node.toggle();
@@ -61,8 +61,7 @@ BlinkyDancer.prototype.step = function() {
   this.setPosition(this.top, this.left);
 
   var isClose = false;
-    console.log([this, this.left, this.top]);
-    for (var i = 0; i < window.dancers.length; i++) {
+  for (var i = 0; i < window.dancers.length; i++) {
     var otherPosition = window.dancers[i].$node.position();
     
     var topdiff = Math.pow(otherPosition.top - this.top, 2);
@@ -71,8 +70,6 @@ BlinkyDancer.prototype.step = function() {
       this.$node.addClass("big");
       isClose = true;
     }
-    
-
   }
   if (isClose === false){
     this.$node.removeClass("big");
