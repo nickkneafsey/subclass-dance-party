@@ -25,7 +25,7 @@ $(document).ready(function() {
     var dancer = new dancerMakerFunction(
       $("body").height() * Math.random(),
       $("body").width() * Math.random(),
-      Math.random() * 1000
+      Math.random() * 2000
     );
     window.dancers.push(dancer);
     $('body').append(dancer.$node);
@@ -36,10 +36,12 @@ $(document).ready(function() {
     var ycoord = 0;
     var offset = $("body").height() / window.dancers.length;
     for (var i = 0; i < window.dancers.length; i++) {
-      window.dancers[i].setPosition(0, ycoord += offset);
+      window.dancers[i].setPosition($("body").height() / 2, ycoord += offset);
       //window.dancers[i].lineUp();
     }
   });
+
+  window.distances = [];
 
 // $(".growing").on("mouseover", function(event) {
 //   $(this).css("border", "100px");

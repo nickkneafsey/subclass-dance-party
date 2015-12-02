@@ -57,6 +57,28 @@ body, a:link, a:visited, a:active{
   width: 80px;
 }
 
+.stick {
+  border:10px solid transparent;
+}
+#stickfig {
+  top: 400;
+  left: 400;
+}
+
+.stickviewport {
+  top: 0;
+  left: 0;
+  position: absolute;
+}
+
+.spinout {
+  animation: boringspin 2s infinite linear;
+}
+
+.wigglyarms {
+  animation: wiggle 2s infinite linear;
+}
+
 @keyframes spin {
     0%  {transform: rotate(0deg);}
     10%  {transform: rotate(-25deg);}
@@ -91,4 +113,10 @@ body, a:link, a:visited, a:active{
   50% {transform: rotate(180deg);}
   75% {transform: rotate(270deg);}
   100% {transform: rotate(360deg);}
+}
+
+@-webkit-keyframes wiggle {
+  0% {-webkit-transform:rotate(4deg);}
+  50% {-webkit-transform:rotate(-4deg);}
+  100% {-webkit-transform:rotate(4deg);}
 }
