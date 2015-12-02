@@ -57,8 +57,10 @@ BlinkyDancer.prototype.step = function() {
     
   }
   
+  if (!window.aligned) {
+    this.setPosition(this.top, this.left);
+  }
 
-  this.setPosition(this.top, this.left);
 
   var isClose = false;
   for (var i = 0; i < window.dancers.length; i++) {

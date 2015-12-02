@@ -26,7 +26,10 @@ Dancer.prototype.step = function() {
   var maxWidth = $("body").width();
   var minHeight = 0;
   var minWidth = 0;
-  this.setPosition((pos.top + this.topStep) % maxHeight, (pos.left + this.leftStep) % maxWidth);
+  if (!window.aligned) {
+      this.setPosition((pos.top + this.topStep) % maxHeight, (pos.left + this.leftStep) % maxWidth);
+  }
+
   var isClose = false;
 
   for (var i = 0; i < window.dancers.length; i++) {
@@ -35,7 +38,7 @@ Dancer.prototype.step = function() {
     var topdiff = Math.pow(otherPosition.top - pos.top, 2);
     var leftdiff = Math.pow(otherPosition.left - pos.left, 2);
 
-    if (this!==window.dancers[i] && Math.sqrt(topdiff + leftdiff) < 45){
+    if (this!==window.dancers[i] && Math.sqrt(topdiff + leftdiff) < 75){
       this.$node.addClass("spinout");
       isClose = true;
     }

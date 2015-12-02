@@ -1,5 +1,5 @@
 var GrowingDancer = function(top, left, timeBetweenSteps) {
-  Dancer.call(this, top, left, timeBetweenSteps);
+  Dancer.call(this, top, left, 2 * timeBetweenSteps);
 
   // this.top = top;
   // this.left = left;
